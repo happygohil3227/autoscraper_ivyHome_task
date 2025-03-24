@@ -5,7 +5,7 @@ The script interacts with an **autocomplete API** that provides search suggestio
 ### 🔹 **v1 API (Basic Alphabet Search)**
 
 - **Allowed characters**: Only **lowercase letters** (a-z).
-- **Response behavior**: Returns up to **12 suggestions** per request.
+- **Response behavior**: Returns up to **10 suggestions** per request.
 - **Usage scenario**: Suitable for basic word predictions using only letters.
 - **Example:**
   - Querying `"a"` might return:
@@ -40,9 +40,9 @@ The script interacts with an **autocomplete API** that provides search suggestio
 - **Response behavior**: Returns up to **15 suggestions** per request.
 - **Usage scenario**: Suitable for more complex searches, including names, product IDs, and phrases.
 - **Example:**
-  - Querying `"a"` might return:
+  - Querying `"0"` might return:
     ```
-    ["apple juice", "apple+watch", "a-list celebrities", "a.b.testing", "amazon store", "alaska 360", "a-rank products", "alpha9", "a100", "a200", "army gear", "army+base", "amigo", "amber", "atlas"]
+    ['0','0 .r m1','0 3','0 4','0 c.xcr+','0 u','0 v-v8gq', '0+22l2p8','0+d','0+e3ldrq', '0+h6i48r1j', '0+k94tv048','0+qcv-mazy','0+qy','0+yg39.ujr']
     ```
   - This version supports **spaces and symbols**, making search queries more flexible.
 
@@ -59,12 +59,11 @@ All three API versions enforce **rate limits**—meaning too many requests in a 
 
 ### 🏁 **Summary of API Differences**
 
-| API Version | Allowed Characters             | Max Suggestions | Use Case                        |
-| ----------- | ------------------------------ | --------------- | ------------------------------- |
-| **v1**      | `a-z` (letters only)           | 12              | Basic word suggestions          |
-| **v2**      | `a-z, 0-9` (letters + numbers) | 12              | Names, product codes, usernames |
-| **v3**      | `a-z, 0-9, space, +, -, .`     | 15              | Phrases, advanced autocomplete  |
-
+| API Version | Allowed Characters             | Max Suggestions |
+| ----------- | ------------------------------ | --------------- |
+| **v1**      | `a-z` (letters only)           | 12              |
+| **v2**      | `a-z, 0-9` (letters + numbers) | 12              | 
+| **v3**      | `a-z, 0-9, space, +, -, .`     | 15              |
 This structure ensures efficient data collection while adapting to the API's behavior. 🚀
 
 ## 2. How It Works (Simple Explanation)
