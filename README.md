@@ -125,7 +125,4 @@ print(f'Total requests count is {api_requests_count}')
 
 The same logic applies for **v2** and **v3**, but with different sets of characters (`v2_char`, `v3_char`).
 
----
-
-This script essentially "crawls" the API in a smart way, making sure we explore all possible search results efficiently. 🚀
 
