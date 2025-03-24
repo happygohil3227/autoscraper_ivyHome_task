@@ -12,8 +12,9 @@ The script interacts with an **autocomplete API** that provides search suggestio
     ```
     ['aa','aabdknlvkc','aabrkcd','aadgdqrwdy','aagqg','aaiha','aainmxg','aajfebume','aajwv','aakfubvxv']
     ```
-  - Since the API returns the full **12 results**, it suggests there may be **more words starting with "a"**.
+  - Since the API returns the full **10 results**, it suggests there may be **more words starting with "a"**.
   - The script will then explore further, refining the search using prefixes like `"aal"`, `"aam"` to `"aaz"`.
+  - Observation: The results are always in lexicographical order, meaning they are sorted alphabetically.
 
 ---
 
@@ -27,7 +28,8 @@ The script interacts with an **autocomplete API** that provides search suggestio
     ```
     ['00981o7oyy','00muuu8','00o1z8b2t5','00tfan4','00us291vs','00vhuwj9','01','010uj5','013a6','01485vptaz','01iq', '01s0hi6']
     ```
-  - Since numbers are included, the script must explore prefixes like `"a1"`, `"a2"`, `"a9"`, etc.
+  - Since numbers are included, the script must explore prefixes like `"02"`, `"03"`, `"04"`, etc.
+  - Observation: The results are always in lexicographical order, meaning they are sorted alphabetically.
 
 ---
 
@@ -61,7 +63,7 @@ All three API versions enforce **rate limits**—meaning too many requests in a 
 
 | API Version | Allowed Characters             | Max Suggestions |
 | ----------- | ------------------------------ | --------------- |
-| **v1**      | `a-z` (letters only)           | 12              |
+| **v1**      | `a-z` (letters only)           | 10             |
 | **v2**      | `a-z, 0-9` (letters + numbers) | 12              | 
 | **v3**      | `a-z, 0-9, space, +, -, .`     | 15              |
 This structure ensures efficient data collection while adapting to the API's behavior. 🚀
